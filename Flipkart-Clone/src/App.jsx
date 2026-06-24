@@ -1,6 +1,8 @@
 import React from 'react'
+import {Route,Routes} from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Categories from './components/Categories'
+import CategoryPage from './components/CategoryPage'
 
 const categories = [
     {
@@ -48,19 +50,27 @@ const categories = [
 
 const App = () => {
   return (
-    <div>
-
+    <>
       <Navbar />
-
-      <h1 className='text-2xl font-semibold px-52 pt-8 pb-4'>Categories</h1>
       
-      <div className='flex flex-wrap px-52 py-6 gap-4'>
-        {categories.map(function(elem){
-          return <Categories name = {elem.name}  img={elem.image}/>
-        })}
-      </div>
+      <Routes>
+        {/* Main Home Page jahan saari categories dikhengi */}
+        <Route path="/" element={
+          <div>
+            <h1 className='text-2xl font-semibold px-52 pt-8 pb-4'>Categories</h1>
+            <div className='flex flex-wrap px-52 py-6 gap-4'>
+              {categories.map(function(elem, idx){
+                return <Categories key={idx} name={elem.name} img={elem.image}/>
+              })}
+            </div>
+          </div>
+        } />
 
-    </div>
+        {/* Dynamic Category Page Route (`:categoryName` ek variable ki tarah kaam karega) */}
+        {/* Dusre pe ye dekho to url bana hai (/category/Mobile) ab :categoryName= (Mobile) ho jayega */}
+        <Route path="/category/:categoryName" element={<CategoryPage/>} />
+      </Routes>
+    </>
   )
 }
 

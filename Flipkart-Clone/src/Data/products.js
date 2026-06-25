@@ -1,6 +1,6 @@
 const mockProducts = {
   Mobile: [
-    { id: 1, title: "iPhone 17 Pro", price: "₹1,29,900", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJ_N0QOVGqFwc9qmRuLOy1wt-Fe-EDlgeemLJLMRThi-i7HpI9rYCW6Bc&s=10" },
+    { id: 1, title: "iPhone 17 Pro", price: "₹1,29,900", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJ_N0QOVGqFwc9qmRuLOy1wt-Fe-EDlgeemLJLMRThi-i7HpI9rYCW6Bc&s=10", description: "Apple iPhone 17 Pro with A19 Pro chip, 48MP triple camera, 6.3-inch Super Retina XDR display, Titanium design, Face ID, and all-day battery life." },
     { id: 2, title: "Samsung Galaxy S25", price: "₹59,999", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3s7diNITAS_yiuHH7MkWAxMwrF9f39Fc_JF6S9dJ4WxoF2Xq5kmwUjY4&s=10" },
     { id: 3, title: "Realme Gt 7", price: "55,999", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVvPlJ-MgJz4Pbnl-B4ZDdLBYWUEfBnGO9Pyocf8ApuA&s" },
     { id: 4, title: "OnePlus 15", price: "72,999", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBvLoOiFK-1ORu2-6IbAA35IQPUVgr2pYwlcaeXlsqJg&s=10" },

@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import Categories from './components/Categories'
 import CategoryPage from './components/CategoryPage'
 import Banner from './components/Banner'
+import ProductDetail from './components/ProductDetail'
 
 const categories = [
     {
@@ -68,8 +69,10 @@ const App = () => {
         } />
 
         {/* Dynamic Category Page Route (`:categoryName` ek variable ki tarah kaam karega) */}
-        {/* Dusre pe ye dekho to url bana hai (/category/Mobile) ab :categoryName= (Mobile) ho jayega */}
+        {/* Dusre pe ye dekho ,to url bana hai (/category/Mobile) ab :categoryName= (Mobile) ho jayega */}
         <Route path="/category/:categoryName" element={<CategoryPage/>} />
+
+        <Route path='/product/:categoryName/:id' element={<ProductDetail />}/>
       </Routes>
     </>
   )

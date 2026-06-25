@@ -14,7 +14,7 @@ const Banner = () => {
             </button>
           </div>
           <img 
-            src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=500" 
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQff6LpdrT3u_uyJRXkmJibnWXiKsfzgHdEbA&s" 
             alt="Banner" 
             className="h-full object-cover opacity-80"
           />

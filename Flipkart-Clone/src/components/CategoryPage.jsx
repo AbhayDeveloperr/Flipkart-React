@@ -29,7 +29,7 @@ const CategoryPage = () => {
   ]
 }
 
-  // teesre pe ye dekho ab yha pe categoryName = mobile ho gaya hai
+  // teesre pe ye dekho ab yha pe categoryName = Mobile ho gaya hai
   const { categoryName } = useParams();
 
   // Us category ke products nikalenge, agar data nahi hai toh khali array milega
@@ -48,7 +48,7 @@ const CategoryPage = () => {
               <img src={product.img} alt={product.title} className="w-full h-44 object-contain mb-3" />
               <h3 className="font-medium text-lg">{product.title}</h3>
               <p className="text-green-600 font-semibold mt-1">{product.price}</p>
-              <button className="mt-3 w-full bg-[#FFE51F] text-black font-medium py-1.5 rounded-md text-sm">
+              <button className="mt-3 w-full bg-[#FFE51F] text-black font-medium py-1.5 rounded-md text-sm cursor-pointer active:scale-95">
                 Add to Cart
               </button>
             </div>

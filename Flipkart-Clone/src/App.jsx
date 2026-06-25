@@ -3,6 +3,7 @@ import {Route,Routes} from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Categories from './components/Categories'
 import CategoryPage from './components/CategoryPage'
+import Banner from './components/Banner'
 
 const categories = [
     {
@@ -52,13 +53,13 @@ const App = () => {
   return (
     <>
       <Navbar />
-      
       <Routes>
         {/* Main Home Page jahan saari categories dikhengi */}
         <Route path="/" element={
           <div>
+            <Banner/>
             <h1 className='text-2xl font-semibold px-52 pt-8 pb-4'>Categories</h1>
-            <div className='flex flex-wrap px-52 py-6 gap-4'>
+            <div className='flex flex-wrap px-52 py-6 gap-8'>
               {categories.map(function(elem, idx){
                 return <Categories key={idx} name={elem.name} img={elem.image}/>
               })}

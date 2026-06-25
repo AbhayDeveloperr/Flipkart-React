@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {Route,Routes} from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Categories from './components/Categories'
 import CategoryPage from './components/CategoryPage'
 import Banner from './components/Banner'
 import ProductDetail from './components/ProductDetail'
+import CartPage from './components/CartPage'
 
 const categories = [
     {
@@ -49,8 +50,10 @@ const categories = [
     }
   ] 
 
-
 const App = () => {
+
+  const [cart, setCart] = useState([]);
+
   return (
     <>
       <Navbar />
@@ -72,7 +75,9 @@ const App = () => {
         {/* Dusre pe ye dekho ,to url bana hai (/category/Mobile) ab :categoryName= (Mobile) ho jayega */}
         <Route path="/category/:categoryName" element={<CategoryPage/>} />
 
-        <Route path='/product/:categoryName/:id' element={<ProductDetail />}/>
+        <Route path='/product/:categoryName/:id' element={<ProductDetail cart={cart} setCart={setCart} />}/>
+
+        <Route path='/cart' element={<CartPage cart={cart}/>} />
       </Routes>
     </>
   )

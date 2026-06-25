@@ -2,7 +2,13 @@ import React from 'react'
 import {useParams} from 'react-router-dom'
 import mockProducts from '../Data/products';
 
-const ProductDetail = () => {
+const ProductDetail = ({cart,setCart}) => {
+
+  const addToCart=()=>{
+    setCart([...cart,product])
+    console.log(cart);
+    
+  }
 
   const {categoryName, id} = useParams();
 
@@ -17,7 +23,7 @@ const ProductDetail = () => {
             <img className='w-1/3' src={product.img}/>
             <h1 className='font-bold text-4xl pl-12'>{product.title}</h1>
             <h2 className='font-semibold text-green-500 pl-12 py-3 text-3xl'>{product.price}</h2>
-            <button className="ml-12 bg-yellow-400 px-6 py-3 rounded">Add To Cart</button>
+            <button onClick={addToCart} className="ml-12 bg-yellow-400 px-6 py-3 rounded">Add To Cart</button>
         </div>
         <div>
             <p>{product.description}</p>

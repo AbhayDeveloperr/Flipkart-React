@@ -4,10 +4,9 @@ import mockProducts from '../Data/products';
 
 const ProductDetail = ({cart,setCart}) => {
 
-  const addToCart=()=>{
+  export const addToCart=()=>{
     setCart([...cart,product])
-    console.log(cart);
-    
+    console.log(cart); 
   }
 
   const {categoryName, id} = useParams();
@@ -23,9 +22,9 @@ const ProductDetail = ({cart,setCart}) => {
             <img className='w-1/3' src={product.img}/>
             <h1 className='font-bold text-4xl pl-12'>{product.title}</h1>
             <h2 className='font-semibold text-green-500 pl-12 py-3 text-3xl'>{product.price}</h2>
-            <button onClick={addToCart} className="ml-12 bg-yellow-400 px-6 py-3 rounded">Add To Cart</button>
+            <button onClick={addToCart} className="ml-12 bg-yellow-400 px-8 py-3 rounded cursor-pointer active:scale-95">Add To Cart</button>
         </div>
-        <div>
+        <div className='py-4'>
             <p>{product.description}</p>
         </div>
       </div>

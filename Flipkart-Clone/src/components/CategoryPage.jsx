@@ -1,6 +1,7 @@
 import React from 'react'
 import {Link, useParams} from 'react-router-dom'
 import mockProducts from '../Data/products'
+import {addToCart} from './ProductDetail'
 
 const CategoryPage = () => {
 
@@ -26,7 +27,7 @@ const CategoryPage = () => {
               </Link>
               <h3 className="font-medium text-lg">{product.title}</h3>
               <p className="text-green-600 font-semibold mt-1">{product.price}</p>
-              <button className="mt-3 w-full bg-[#FFE51F] text-black font-medium py-1.5 rounded-md text-sm cursor-pointer active:scale-95">
+              <button onClick={addToCart} className="mt-3 w-full bg-[#FFE51F] text-black font-medium py-1.5 rounded-md text-sm cursor-pointer active:scale-95">
                 Add to Cart
               </button>
             </div>

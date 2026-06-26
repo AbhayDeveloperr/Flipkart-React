@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   return (
@@ -25,10 +26,12 @@ const Navbar = () => {
                         <p>Account</p>
                     </div>
                     <div className="cursor-pointer">More</div>
-                    <div className="flex space-x-2 items-center cursor-pointer">
-                        <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/header_cart_v4-6ac9a8.svg" alt="" />
-                        <p>Cart</p>
-                    </div>
+                    <Link to="/cart">
+                        <div className="flex space-x-2 items-center cursor-pointer">
+                            <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/header_cart_v4-6ac9a8.svg" alt="" />
+                            <p>Cart</p>
+                        </div>
+                    </Link>
                 </div>
             </div>
         </div>

@@ -56,7 +56,7 @@ const App = () => {
 
   return (
     <>
-      <Navbar />
+      <Navbar cart = {cart} />
       <Routes>
         {/* Main Home Page jahan saari categories dikhengi */}
         <Route path="/" element={
@@ -73,7 +73,7 @@ const App = () => {
 
         {/* Dynamic Category Page Route (`:categoryName` ek variable ki tarah kaam karega) */}
         {/* Dusre pe ye dekho ,to url bana hai (/category/Mobile) ab :categoryName= (Mobile) ho jayega */}
-        <Route path="/category/:categoryName" element={<CategoryPage/>} />
+        <Route path="/category/:categoryName" element={<CategoryPage cart={cart} setCart={setCart}/>} />
 
         <Route path='/product/:categoryName/:id' element={<ProductDetail cart={cart} setCart={setCart} />}/>
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Navbar = () => {
+const Navbar = ({cart}) => {
   return (
     <div>
        <header className="shadow-sm">
@@ -27,9 +27,14 @@ const Navbar = () => {
                     </div>
                     <div className="cursor-pointer">More</div>
                     <Link to="/cart">
-                        <div className="flex space-x-2 items-center cursor-pointer">
+                        <div className="flex space-x-2 items-center cursor-pointer relative">
                             <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/header_cart_v4-6ac9a8.svg" alt="" />
                             <p>Cart</p>
+                            {cart && cart.length > 0 && (
+                              <span className="absolute -top-2 -right-3 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full font-bold">
+                                {cart.length}
+                              </span>
+                            )}
                         </div>
                     </Link>
                 </div>

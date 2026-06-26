@@ -4,7 +4,7 @@ import mockProducts from '../Data/products';
 
 const ProductDetail = ({cart,setCart}) => {
 
-  export const addToCart=()=>{
+  const addToCart=()=>{
     setCart([...cart,product])
     console.log(cart); 
   }

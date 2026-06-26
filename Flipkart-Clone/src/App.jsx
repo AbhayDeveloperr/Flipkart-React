@@ -77,7 +77,7 @@ const App = () => {
 
         <Route path='/product/:categoryName/:id' element={<ProductDetail cart={cart} setCart={setCart} />}/>
 
-        <Route path='/cart' element={<CartPage cart={cart}/>} />
+        <Route path='/cart' element={<CartPage cart={cart} setCart={setCart}/>} />
       </Routes>
     </>
   )

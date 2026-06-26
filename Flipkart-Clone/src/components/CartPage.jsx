@@ -1,12 +1,18 @@
 import React from 'react'
 
-const CartPage = ({cart}) => {
+const CartPage = ({cart,setCart}) => {
   if(cart.length==0){
     return (
        <h1 className="text-center text-3xl mt-20">
             Cart is Empty
         </h1>
     )
+  }
+
+  const removeFromCart=(indexToRemove)=>{
+    // Jo index match nahi karega, wo cart me reh jayega
+    const updateCart = cart.filter((_,index)=> index !== indexToRemove)
+    setCart(updateCart)
   }
 
   return (
@@ -21,7 +27,9 @@ const CartPage = ({cart}) => {
                           <p className="text-green-600 text-xl mt-2">{item.price}</p>
                       </div>
                   </div>
-                  <button className="bg-red-500 text-white px-5 py-2 rounded cursor-pointer">
+                  <button onClick={()=>{
+                    removeFromCart(index)
+                  }} className="bg-red-500 text-white px-5 py-2 rounded cursor-pointer">
                       Remove
                   </button>
               </div>

@@ -61,9 +61,11 @@ const App = () => {
     localStorage.setItem('myCart', JSON.stringify(cart))
   },[cart])
 
+  const [search, setSearch] = useState("");
+
   return (
     <>
-      <Navbar cart = {cart} />
+      <Navbar cart = {cart} search={search} setSearch={setSearch}/>
       <Routes>
         {/* Main Home Page jahan saari categories dikhengi */}
         <Route path="/" element={

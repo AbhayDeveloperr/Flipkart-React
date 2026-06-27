@@ -15,10 +15,6 @@ const CartPage = ({cart,setCart}) => {
     setCart(updateCart)
   }
 
-  const data = localStorage.setItem("cartData",cart)
-  console.log(data);
-  
-
   return (
     <div className='px-52 py-10'>
       {cart.map((item,index)=>{

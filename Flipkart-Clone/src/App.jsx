@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import {Route,Routes} from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Categories from './components/Categories'
@@ -52,7 +52,14 @@ const categories = [
 
 const App = () => {
 
-  const [cart, setCart] = useState([]);
+  // pehle ye code tha bad,me neeche wala aaega localStorage me cart save krne ke liye
+  // const [cart, setCart] = useState([]);
+
+  const [cart, setCart] = useState(JSON.parse(localStorage.getItem('myCart')) || []);
+
+  useEffect(function(){
+    localStorage.setItem('myCart', JSON.stringify(cart))
+  },[cart])
 
   return (
     <>

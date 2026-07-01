@@ -36,7 +36,10 @@ const CartPage = ({cart,setCart}) => {
           )
         })
       }
+      console.log("Maintaining streaks");
+      
     </div>
+    
   )
 }
 
